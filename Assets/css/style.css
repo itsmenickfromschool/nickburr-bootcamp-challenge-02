@@ -104,44 +104,69 @@ nav div a {
     color: var(--color3);
 }
 
-.work {
+.big-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-.work h1 {
+.work {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.big-container h1 {
     flex-basis: 25%;
+    min-height: max-content;
     padding: 2rem 2rem;
     font-size: xx-large;
     font-weight:1000;
     border-right: 5px solid var(--color3);
     color: var(--color3);
 }
-.firstApp{
-    display:flex;
+.firstApp {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
-.work .firstApp img {
-    flex:0 1 75%;
-    width: 300px;
+ .firstApp img {
+    flex-basis: 100%;
+    justify-self: flex-end;
+    width: 75%;
     height: auto;
-    justify-self:flex-end;
-    margin-right: 50px;
+    border: 5px solid var(--color3);
+    z-index: 1;
+    
+}
+
+.firstApp h2 {
+    position: absolute;
+    left: 12.5%;
+    bottom: 200px;
+    z-index: 2;
+    background-color: var(--color1);
+    color: var(--color3);
+    font-size: large;
+    padding: 1rem 1rem;
     border: 5px solid var(--color3);
 
-
-}
+} 
 .firstTwoApps  {
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
     
 }
-.firstSmallApp {
-    flex-basis:33%;
-
-
+.firstSmallApp img {
+    flex-basis: 100%;
+    width: 100%;
+    height: auto;
+    border: 5px solid var(--color3);
+    z-index: 1;
 }
+
 
 .SecondTwoApps {
     display: flex;
@@ -149,12 +174,9 @@ nav div a {
     flex-direction: row;
 
 }
-.SecondSmallApp {
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
 
-}
+
+
     
 .contact {
     display: flex;
@@ -169,16 +191,15 @@ nav div a {
     color: var(--color3);
 }
 
-
-
-
-
-
 @media screen and (max-width:768px) {
-    nav{
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    nav {
+        display:flex;
         flex-direction: column;
         flex-basis: 100%;
-        align-items: center;
         gap: 1rem;
         padding-top: none;
     }
