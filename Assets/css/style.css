@@ -17,6 +17,7 @@ body {
 header {
     background-color: var(--color2);
     border-color:var(--color1);
+    border-radius: 13px;
     display: flex;
     flex-wrap: wrap;
     height:max-content;
@@ -31,6 +32,7 @@ header h1 {
     font-weight:bolder;
     color: var(--color1);
     background-color:var(--color3);
+    border-radius: 13px;
     padding: 1rem 2rem;
     margin-right: 1rem;
     margin-left: none;
@@ -54,6 +56,7 @@ nav div a {
     white-space:nowrap;
     gap: 1rem;
     justify-content: flex-end;
+    border: 2px solid var(--color3)
 }
 
 .background-img {
@@ -114,7 +117,7 @@ nav div a {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    position: relative;
+    
 }
 
 .big-container h1 {
@@ -125,11 +128,13 @@ nav div a {
     font-weight:1000;
     border-right: 5px solid var(--color3);
     color: var(--color3);
+    background-color: var(--color1);
 }
 .firstApp {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    position: relative;
 }
  .firstApp img {
     flex-basis: 100%;
@@ -137,19 +142,18 @@ nav div a {
     width: 75%;
     height: auto;
     border: 5px solid var(--color3);
-    z-index: 1;
+   
     
 }
 
 .firstApp h2 {
     position: absolute;
-    left: 12.5%;
-    bottom: 200px;
-    z-index: 2;
+    left: 5%;
+    bottom: 15%;
     background-color: var(--color1);
     color: var(--color3);
-    font-size: large;
-    padding: 1rem 1rem;
+    font-size: small;
+    padding: .5rem .5rem;
     border: 5px solid var(--color3);
 
 } 
@@ -157,22 +161,65 @@ nav div a {
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
+    position: relative;
     
 }
 .firstSmallApp img {
     flex-basis: 100%;
-    width: 100%;
+    width: 50vw;
     height: auto;
     border: 5px solid var(--color3);
     z-index: 1;
 }
 
+.second {
+    font-size:small;
+    text-decoration: none;
+    position: absolute;
+    left: 5%;
+    bottom: 15%;
+    background-color: var(--color1);
+    color: var(--color2);
+    border: 1px solid var(--color3); 
+}
+
+.third {
+    font-size:small;
+    text-decoration: none;
+    position: absolute;
+    left: 55%;
+    bottom: 15%;
+    background-color: var(--color1);
+    color: var(--color2);
+    border: 1px solid var(--color3);
+}
 
 .SecondTwoApps {
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
+}
 
+.fourth { 
+    font-size:small;
+    text-decoration: none;
+    position: absolute;
+    left: 5%;
+    bottom: 15%;
+    background-color: var(--color1);
+    color: var(--color2);
+    border: 1px solid var(--color3);
+}
+
+.fifth {
+    font-size:small;
+    text-decoration: none;
+    position: absolute;
+    left: 55%;
+    bottom: 15%;
+    background-color: var(--color1);
+    color: var(--color2);
+    border: 1px solid var(--color3);
 }
 
 
@@ -181,6 +228,7 @@ nav div a {
 .contact {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 .contact h1 {
     flex-basis: 25%;
@@ -190,6 +238,20 @@ nav div a {
     border-right: 5px solid var(--color3);
     color: var(--color3);
 }
+
+.contact div, .contact div a{
+    flex: 1 1 auto;
+    font-size: large;
+    text-decoration: none;
+    color: var(--color3);
+    background-color: var(--color1);
+    padding: 1rem 2rem;
+    white-space: nowrap;
+    gap: 1rem;
+    justify-content: flex-end;
+
+}
+    
 
 @media screen and (max-width:768px) {
     header {
@@ -205,6 +267,9 @@ nav div a {
     }
     header h1 {
         flex:1 1 auto;
+    }
+    .contact div, .contact div a {
+        flex-direction: column;
     }
 }
 
